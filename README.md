@@ -48,19 +48,21 @@ To get started with K#, follow these steps:
    cd ksharp
 
 
+2. **Writing a K# Program**:
+   ```sh
+   Start
+     int x = 10;
+     int y = 20;
+     int sum = x + y;
+     if (sum > 20) {
+       print("Sum is greater than 20");
+     } else {
+       print("Sum is 20 or less");
+     }
+   End
+   
 
 
 
 
 
-
-Start
-  int x = 10;
-  int y = 20;
-  int sum = x + y;
-  if (sum > 20) {
-    print("Sum is greater than 20");
-  } else {
-    print("Sum is 20 or less");
-  }
-End
