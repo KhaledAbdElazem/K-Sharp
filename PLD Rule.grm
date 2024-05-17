@@ -1,0 +1,58 @@
+// Grammar rules for K#
+
+"Start Symbol"= <program>
+              
+!-------terminal ------
+
+id = {letter}
+   
+digit = {digit}
+!------ Rules ------
+
+<program> ::= Start <stmt_list> End
+           
+<stmt_list> ::= <concept>
+             | <concept><stmt_list>
+             
+<concept> ::= <assign>
+           | <if_stmt>
+           | <for_stmt>
+           | <while_stmt>
+           | <func_def>
+           | <func_call>
+           | <io_stmt>
+           
+<assign> ::= <id> '=' <expr>
+          
+<id> ::= id
+      
+<digit> ::= digit
+     
+<expr> ::= <expr> '+' <term>
+        | <expr> '-' <term>
+        | <term>
+        
+<term> ::= <term> '*' <factor>
+        | <term> '/' <factor> 
+        | <term> '%' <factor>
+        | <factor>
+        
+<factor> ::= <factor> '**' <exp>
+          | <exp>
+          
+<exp> ::= '(' <expr> ')'
+       | <id>
+       | <digit>
+       
+<if_stmt> ::= if '(' <cond> ')' '{' <stmt_list> '}' 
+            | if '(' <cond> ')' '{' <stmt_list> '}' 'else' '{' <stmt_list> '}'
+          
+<cond> ::= <expr> <op> <expr>
+        
+<op> ::= '<' | '>' | '==' | '!=' | '<=' | '>='
+      
+<for_stmt> ::= for '(' <data> <assign> ';' <cond> ';' <step> ')' '{' <stmt_list> '}'
+            
+<data> ::= int | fl | db | str
+
+<step> ::= <id> '++' | <id> '--' | '++' <id> | '--' <id> | <assign>
