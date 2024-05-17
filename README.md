@@ -9,8 +9,7 @@ Welcome to the K# programming language repository! This project contains the gra
 - [Project Setup](#project-setup)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
