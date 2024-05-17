@@ -47,8 +47,17 @@ To get started with K#, follow these steps:
    git clone https://github.com/yourusername/ksharp.git
    cd ksharp
 
+2.Open the Project:
 
-2. **Writing a K# Program**:
+3.Open WindowsFormsApp4.sln in Visual Studio.
+Build the Project:
+
+4.Compile the project to generate the necessary executables.
+
+
+
+
+5. **Writing a K# Program**:
    ```sh
    Start
      int x = 10;
